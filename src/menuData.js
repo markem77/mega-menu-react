@@ -1,6 +1,6 @@
 export const menuData = [
   {
-    label: 'Buy properties',
+    label: 'Produits',
     href: '/buy',
     children: [
       {
@@ -58,7 +58,7 @@ export const menuData = [
     ],
   },
   {
-    label: 'Rent homes',
+    label: 'Communauté',
     href: '/rent',
     children: [
       {
@@ -101,7 +101,7 @@ export const menuData = [
     ],
   },
   {
-    label: 'Sell',
+    label: 'Marchés',
     href: '/sell',
     children: [
       {
@@ -149,10 +149,50 @@ export const menuData = [
       },
     ],
   },
-  { label: 'News & Insights', href: '/news' },
+  { label: 'Actualités', href: '/news' },
   {
-    label: 'Mortgage',
+    label: 'Courtiers',
     href: '/mortgage',
+    children: [
+      {
+        heading: 'Mortgage rates',
+        submenu: [
+          { label: 'Lorem ipsum dolor', href: '#' },
+          { label: 'Repellat corporis?', href: '#' },
+          { label: 'Dolor sit consectetur dolor impedit', href: '#' },
+          { label: 'Ratione recusandae', href: '#' },
+          { label: 'Dolor sit consectetur', href: '#' },
+          { label: 'Ratione recusandae', href: '#' },
+        ],
+      },
+      {
+        heading: 'Calculators',
+        submenu: [
+          { label: 'Dolor sit consectetur', href: '#' },
+          { label: 'Ratione recusandae dolor impedit', href: '#' },
+          { label: 'Dolor sit consectetur', href: '#' },
+          { label: 'Ratione recusandae', href: '#' },
+        ],
+      },
+      {
+        heading: 'Financial advice',
+        submenu: [
+          { label: 'Lorem ipsum dolor', href: '#' },
+          { label: 'Repellat corporis?', href: '#' },
+          { label: 'Dolor sit consectetur', href: '#' },
+          {
+            label: 'Ratione recusandae dolor impedit corporis',
+            href: '#',
+          },
+          { label: 'Dolor sit consectetur', href: '#' },
+          { label: 'Ratione recusandae', href: '#' },
+        ],
+      },
+    ],
+  },
+  {
+    label: 'Plus',
+    href: '/dec',
     children: [
       {
         heading: 'Mortgage rates',

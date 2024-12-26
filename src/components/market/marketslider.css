@@ -1,0 +1,184 @@
+
+.slick-slide {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.caroussel_cont{
+    width: 90%; 
+    margin: 0 auto;
+    padding: 2px 0;
+    box-sizing: border-box;
+}
+
+.custom-slider-secondary .slick-slide {
+  padding: 0 15px; /* Ajoute un espacement horizontal autour de chaque carte */
+  box-sizing: border-box; /* Assure que le padding n'affecte pas la taille totale */
+}
+
+.custom-slider-secondary .slick-track {
+  display: flex; /* Transforme la piste en flexbox pour gérer les espacements */
+  gap: 120px; /* Fonctionne maintenant grâce à `display: flex` */
+}
+
+.custom-slider-third .slick-track{
+  display: flex;
+  gap:20px;
+}
+
+.scroll-wrapper {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  scrollbar-width: none; /* Masquer les barres de défilement sur Firefox */
+  width:100%;
+  gap:25px;
+}
+
+.scroll-wrapper::-webkit-scrollbar {
+  display: none; /* Masquer les barres de défilement sur Chrome/Safari */
+}
+
+
+.scroll-item {
+  display: inline-block;
+  width: 180px;
+  margin: 0 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Empêche les débordements horizontaux */
+}
+
+/* Réinitialisation des flèches */
+.slick-prev::before,
+.slick-next::before {
+  content: ''; /* Supprime les icônes par défaut */
+}
+
+/* Styles pour les flèches */
+.slick-prev,
+.slick-next {
+  width: 40px; /* Taille du bouton */
+  height: 40px;
+  display: flex; /* Utilise flex pour centrer le contenu */
+  justify-content: center;
+  align-items: center;
+  background-color: #2b2b2b; /* Couleur de fond */
+  border-radius: 50%; /* Forme circulaire */
+  z-index: 10; /* S'assure que les flèches sont au-dessus */
+  opacity: 1; /* Toujours visible */
+  transition: all 0.3s ease; /* Transition pour les effets au survol */
+  color: white; /* Couleur des icônes ou du texte */
+  cursor: pointer;
+  border: none; /* Supprime les bordures */
+}
+
+/* Ajoute les icônes ou le contenu des flèches */
+.slick-prev::after,
+.slick-next::after {
+  content: '◀'; /* Flèche gauche par défaut */
+  font-size: 20px; /* Taille de la flèche */
+  color: white; /* Couleur des flèches */
+}
+
+.slick-next::after {
+  content: '▶'; /* Flèche droite */
+}
+
+/* Positionnement */
+.slick-prev {
+  position: absolute;
+  left: -50px; /* Décale à gauche */
+  top: 50%; /* Centré verticalement */
+  transform: translateY(-50%);
+}
+
+.slick-next {
+  position: absolute;
+  right: -20px; /* Décale à droite */
+  top: 50%; /* Centré verticalement */
+  transform: translateY(-50%);
+}
+
+/* État hover */
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: #2b2b2b; /* Couleur légèrement plus sombre */
+  transform: translateY(-50%) scale(1.1); /* Légère augmentation de taille */
+  color: #3498db;
+}
+
+/* Désactive les flèches si elles ne sont pas cliquables */
+.slick-prev.slick-disabled,
+.slick-next.slick-disabled {
+  opacity: 0.5; /* Flèches atténuées */
+  cursor: not-allowed; /* Curseur désactivé */
+}
+
+
+
+/******************MARKETSLIDER RESPONSVIVE******************/
+
+
+@media (max-width: 611px){
+  
+  .caroussel_cont{
+    width:100%;
+  }
+
+  .scroll-wrapper{
+    gap:5px;
+  }
+}
+
+@media (max-width: 590px){
+
+  /* DESACTIVER LA FLEXIBILITEE DE MARKETCARD */
+  .caroussel_cont .slick-slide{
+    flex: 0 0 175px !important; /* Largeur fixe */
+    width: 175px !important; /* Taille constante */
+    max-width: 175px !important;
+  }
+
+  .caroussel_cont .slick-track{
+    display: flex !important; /* Forcer un comportement flex */
+    flex-wrap: nowrap !important; /* Aucun passage à la ligne */
+  }
+ 
+ 
+  
+/* DESACTIVER LA FLEXIBILITEE DE CUSTOMCARD */
+ .custom-slider-secondary .slick-slide{
+      flex:none;
+      width:180px !important;
+  }
+
+  .caroussel_cont .custom-slider-secondary .slick-track{
+    flex-wrap: nowrap !important; /* Empêche le passage à la ligne */
+    border:1px solid red;
+  }
+
+  /* DESACTIVER LA FLEXIBILITEE DE STOCKCARD */
+   .custom-slider-third .slick-slide{
+    flex: 0 0 180px !important; /* Largeur fixe */
+    width:180px !important;
+    max-width: 175px !important;
+  }
+
+  .custom-slider-third .slick-track{
+    display: flex !important; /* Forcer un comportement flex */
+    flex-wrap: nowrap !important; 
+  }
+
+}

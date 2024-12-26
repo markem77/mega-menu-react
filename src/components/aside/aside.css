@@ -1,0 +1,112 @@
+
+
+
+.aside_cont{
+    width:367px;
+    height:100%;
+    right:0;
+    margin:0;
+    box-sizing: border-box;
+    position:fixed;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+.Button_cont{
+  display:flex;
+  flex-direction:column;
+  height:70%;
+  width:100%;
+  justify-content: center;
+  align-items:center;
+  gap:30px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+
+@media (max-width: 1264px) {
+    .aside_cont{
+      display:none;
+      visibility:hidden;
+    }
+    
+  }
+
+  /****BACKGROUND ASIDE ***/
+
+
+  @font-face {
+    font-family: "Geist";
+    src: url("https://assets.codepen.io/605876/GeistVF.ttf") format("truetype");
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --size: 20px;
+  }
+  
+  .aside_cont {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background: hsl(0 0% 6%);
+  }
+  
+  .el {
+    position: relative; /* Pour positionner le contenu interne */
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .el::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(
+    from 180deg at 50% 70%
+    ,hsla(0,0%,98%,1) 0deg,
+    #eec32d 72.0000010728836deg
+    ,#ec4b4b 144.0000021457672deg,
+    #709ab9 216.00000858306885deg,
+    #4dffbf 288.0000042915344deg,
+    hsla(0, 0%, 98%, 1) 1turn
+    );
+    mask: radial-gradient(circle at 50% 50%, white 2px, transparent 2.5px) 50% 50% / var(--size) var(--size),
+      url("https://assets.codepen.io/605876/noise-mask.png") 256px 50% / 256px 256px;
+    mask-composite: intersect;
+    animation: flicker 20s infinite linear;
+  }
+
+
+   .el h1 {
+    position: relative; /* Positionne le H1 par rapport à l'élément parent */
+    z-index: 2; /* Met le H1 devant l'animation */
+    margin: 0;   
+    width:210px;
+    font-size: 18px;
+    font-family:"Geist", sans-serif;
+    font-weight:140;
+    color:azure;
+    box-sizing: border-box;
+    margin-right:45px;
+  }
+
+
+  @keyframes flicker {
+    to {
+      mask-position: 50% 50%, 0 50%;
+    }
+  }

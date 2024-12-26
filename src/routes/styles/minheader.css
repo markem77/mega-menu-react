@@ -1,0 +1,143 @@
+
+
+.minheader_cont{
+    padding:17px;
+    margin-top:25px;
+    width:100%;
+    height:150px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+.minheader_nav {
+    width: 80%;
+    margin: 10px;
+    padding: 10px;
+  }
+
+
+  .minheader_nav .slick-slide {
+    display: flex;
+    justify-content: center;
+    gap:5px;
+  }
+  
+
+  .minheader_nav a {
+    font-size:14px;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    margin:0;
+    border-radius: 5px;
+    font-weight: 600;
+    display: flex;
+    transition: background-color 0.3s;
+  }
+  
+
+  .minheader_nav a:hover {
+    background-color: #ddd;
+  }
+  
+
+  .minheader_nav  .slick-track {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important; /* Assure un comportement flex */
+    gap: 13px; /* Réduit l'espace entre les éléments */
+    
+  }
+
+
+  .slick-slide.slick {
+    margin: 0 !important;
+  }
+
+
+  .minheader_nav .slick-slide {
+    display:flex;
+    margin: 0;
+    padding: 5px; /* Ajuste le padding global */
+    width:auto !important; 
+  }
+ 
+  .minheader_nav a {
+    margin: 0;
+    padding: 5px; /* Réduit le padding interne */
+  }
+
+
+  @media (max-width: 1097px) {
+    
+    .minheader_nav {
+      width: 98%;
+    }
+  }
+
+  @media (max-width: 950px) {
+
+    .minheader_cont{
+      padding:5px;
+      height: 90px;
+    }
+
+    .minheader_cont h1{
+      font-size:19px;
+    }
+
+    .minheader_nav a{
+      font-size:12px;
+    }
+
+  }
+
+
+  @media (max-width: 749px) {
+
+    .minheader_cont h1{
+      font-size:17px;
+      margin-top: 2px;
+      padding-left:12px;
+    }
+
+    .minheader_nav{
+      padding:5px;
+      width:100%
+    }
+
+    .minheader_nav a{
+      font-weight:normal;
+    }
+  }
+
+  @media (max-width: 345px){
+
+    .minheader_nav  .slick-track{
+      flex:none !important;
+      width:650px !important;
+    }
+
+
+    .minheader_nav .slick-slide-slick-cloned{
+      width:100px !important;
+    }
+
+    .minheader_nav a{
+      padding:0;
+      margin:2px;
+    }
+
+    .minhead-flex h1{
+      margin-top:25px;
+    }
+
+    /*DESACTIVER LA FLEXBILITEE DU PREMIER HEADER */
+    .minheader_cont.minhead-flex .minheader_nav .slick-slide{
+      flex:none;
+      margin-bottom: 30px;
+    }
+
+  }

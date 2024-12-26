@@ -1,0 +1,101 @@
+
+
+.stock-grid {
+    width:95%;
+    display:grid;
+    margin:15px auto;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    row-gap: 12px;
+    border:1px solid red;
+    place-items: center;
+    column-gap: 2px;
+  }
+
+  .stock-cagri:hover{
+    background-color: rgb(221, 231, 241);
+    cursor:pointer;
+  }
+  
+  .stock-cagri {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 8px;
+    padding: 7px 7px;
+    width: 300px;
+    margin:0;
+  }
+  
+  .stock-card-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .stock-logo {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .stock-details {
+    flex: 1;
+  }
+  
+  .stock-title {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .stock-subtitle {
+    margin: 0;
+    color: #757575;
+  }
+  
+  .stock-cagri-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .stock-cagri .stock-price {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .stock-cagri .stock-currency {
+    font-size: 14px;
+    margin-left: 4px;
+  }
+  
+  .stock-change {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .stock-change.positive {
+    color: #4caf50;
+  }
+  
+  .stock-change.negative {
+    color: #f44336;
+  }
+  
+  
+  @media (max-width: 1124px){
+    .stock-cagri{
+      grid-template-columns: repeat(auto-fit, minmax(410px, 1fr));
+    }
+  }
+
+  @media (max-width: 985px) {
+    .stock-grid{
+    }
+  }
+
+  @media (max-width: 719px) {
+    .stock-cagri{
+      width:90%;
+    }
+  }

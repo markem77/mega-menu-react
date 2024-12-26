@@ -1,0 +1,32 @@
+.chart-container {
+    background-color: #ffffff; /* Fond blanc ou couleur personnalisée */
+    padding: 20px; 
+    border: 1px solid #e0e0e0; /* Bordure légère pour délimiter */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour l'effet visuel */
+    max-width: 95%; /* Largeur maximale pour limiter la taille */
+    margin: 20px auto; /* Centrage horizontal */
+  }
+  
+  .chart-container h2 {
+    text-align: center; /* Centre le titre */
+    font-size: 20px; /* Taille de police ajustée */
+    color: #333; /* Couleur du texte */
+    margin-bottom: 20px; /* Espacement en dessous du titre */
+  }
+  
+  .chart-container .recharts-tooltip-wrapper {
+    border-radius: 5px; /* Coins arrondis pour l'info-bulle */
+    background-color: rgba(0, 0, 0, 0.8); /* Fond semi-transparent */
+    color: #fff; /* Texte blanc */
+  }
+  
+  .hidden-desktop {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .hidden-desktop {
+      display: block; /* Réapparaît en mode mobile */
+    }
+  }

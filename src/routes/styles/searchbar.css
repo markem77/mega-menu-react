@@ -1,0 +1,25 @@
+.nav__header .react-autosuggest__input {
+    padding: 0.5rem;
+    border-radius: 25px;
+    width: 120px;
+    background-color:#f0f3fa;
+}
+  
+@media (max-width: 996px){
+  .nav__header .react-autosuggest__input{
+    width:130%;
+  }
+}
+
+@media (max-width: 590px){
+  .nav__header .react-autosuggest__input{
+    width:110%;
+  }
+}
+
+@media (max-width: 405px){
+  .nav__header .react-autosuggest__input{
+    width:100%;
+  }
+}
+

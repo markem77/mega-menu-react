@@ -1,8 +1,8 @@
 import Container from '../Container';
 
-import defaultBanner from '../../assets/images/default_banner.jpg';
 
-const HeroContent = ({ imageSrc = defaultBanner, children }) => {
+
+const HeroContent = ({ imageSrc = image, children }) => {
   return (
     <div className="hero">
       <div className="img_wrapper">
